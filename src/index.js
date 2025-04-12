@@ -14,6 +14,10 @@ app.get('/new', (req, res) => {
   res.json({ message: 'Hello World!' });
 });
 
+app.get('/hi', (req, res) => {
+  res.json({ message: 'hi' });
+});
+
 app.listen(process.env.PORT || 8085, () => {
   console.log(`Server running on port: ${PORT}`);
 });
