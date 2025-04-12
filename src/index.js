@@ -10,6 +10,10 @@ app.get('/', (req, res) => {
   res.json({ status: 'UP' });
 });
 
+app.get('/new', (req, res) => {
+  res.json({ message: 'Hello World!' });
+});
+
 app.listen(process.env.PORT || 8085, () => {
   console.log(`Server running on port: ${PORT}`);
 });
