@@ -7,9 +7,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => {
-  res.json({ readiness: 'UP' });
+  res.json({ status: 'UP' });
 });
 
-app.listen(8085, () => {
-  console.log(`Successfully started the server on PORT : ${8085}`);
+app.listen(process.env.PORT || 8085, () => {
+  console.log(`Server running on port: ${PORT}`);
 });
+
+module.exports = app;
